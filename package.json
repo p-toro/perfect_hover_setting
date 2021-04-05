@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "parcel index.pug",
-    "build": "parcel build index.pug"
+    "build": "rm ./docs/*; parcel build index.pug --out-dir ./docs/ --public-url ./"
   },
   "devDependencies": {
     "pug": "^3.0.2",
