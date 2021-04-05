@@ -1,0 +1,44 @@
+@mixin hover() {
+  // for mouse device
+  @media (hover: hover) {
+    &:hover,
+    &:focus {
+      @content;
+    }
+  }
+  // for touch device
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+  // for IE
+  @media all and (-ms-high-contrast: none) {
+    &:hover,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+.wrapper {
+  padding: 1em;
+}
+
+.btn {
+  display: inline-block;
+  margin: 0 1em;
+  padding: 1.5em 3em;
+  border: 1px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  background-color: #957dad;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+
+  @include hover {
+    background-color: #e0bbe4;
+  }
+}

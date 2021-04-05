@@ -1,0 +1,14 @@
+{
+  "name": "perfect_hover_setting",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel index.pug",
+    "build": "parcel build index.pug"
+  },
+  "devDependencies": {
+    "pug": "^3.0.2",
+    "sass": "^1.32.8"
+  }
+}
